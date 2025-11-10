@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>bulb light</title>
+<style>
+body{
+text-align:center;
+padding-top:80px;
+font-family:Arial,sans-serif;
+}
+img{
+width:150px;
+height:250px;
+margin-top:20px
+}
+button{
+padding:10px 20px;
+font-size:18px;
+cursor:pointer;
+border-radius:10px;
+margin:5px;
+}
+</style>
+</head>
+<body>
+<img id="bulb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm_OCnWDYaOQ6oGMOZjZFbq_REM8Pv6MLwg&s" alt="Light Bulb">
+<br>
+<button id="onBtn">Turn On</button>
+<button id="offBtn">Turn Off</button>
+<script>
+const bulb=document.getElementById("bulb");
+const onBtn=document.getElementById("onbulb");
+const offBtn=document.getElementById("offbulb");
+onBtn.addEventListener("click",fucntion(){
+bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV1OKvOxcRHZnEblyJ-Gqa8yV96wADePA2xg&sss";
+});
+offBtn.addEventListener("click",fucntion(){
+bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEm_OCnWDYaOQ6oGMOZjZFbq_REM8Pv6MLwg&s";
+});
+</script>
+</body>
+</html>

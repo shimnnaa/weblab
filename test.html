@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue</title>
+</head>
+<body>
+  <h1>Vue Framework  Basic Syntax</h1>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+<p>{{ sayHello }}</p>
+<input type="text" v-model="name">
+
+</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        name: 'Anshad'
+      }
+    },  
+    computed:{
+      sayHello() {
+        return 'hello ' + this.name
+      }
+    },
+    method
+  }).mount('#app')
+</script>
+</body>
+</html>

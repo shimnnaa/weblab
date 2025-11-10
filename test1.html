@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Vue</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <h1>Vue Framework Basic Syntax</h1> 
+         
+  <div id="app">
+     
+       <br>
+
+    <button @click="changepage('home')">Home</button><br>
+    <button @click="changepage('about')">About</button><br>
+    <button @click="changepage('contact')">Contact</button><br><br>
+
+    {{ content }}
+    
+  </div>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          content: "", 
+          pages: {
+            home: "This is home page, Welcome to Vue Framework",
+            about: "This is about page",
+            contact: "This is contact page"
+          }                             
+        }
+      },
+      methods: {
+        changepage(page) {
+          this.content = this.pages[page];
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>

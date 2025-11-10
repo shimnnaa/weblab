@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>navigation</title>
+<style>
+body {
+margin: 0;
+font-family: arial,sans-serif;
+  }
+.navigationbar {
+background-color:green;
+width:200px;
+height:100vh;
+position:fixed;
+top:0;
+left:0;
+padding-top:20px;
+  }
+.navigationbar a{
+display:block;
+color:white;
+padding:12px;
+font-weight:bold;
+}
+.navigationbar a:hover{
+background-color:darkgreen;
+}
+iframe[name="content"] {
+position: absolute;
+left: 200px;
+top: 0;
+width: calc(100% - 200px);
+height: 100vh;
+border: none;
+}
+</style>
+</head>
+<body>
+<div class="navigationbar">
+<a href="aboutus.html" target="content" > About Us </a>
+<a href="departments.html" target="content" > Departments</a>
+<a href="visionnmission.html" target="content" > Vision/Mission</a>
+<a href="contactus.html" target="content" > Contact Us</a>
+</div>
+<div class="main">
+<iframe name="content" src="aboutus.html"></iframe>
+<iframe name="content" src="departments.html"></iframe>
+<iframe name="content" src="visionnmission.html"></iframe>
+<iframe name="content" src="contactus.html"></iframe>
+</div>
+</body>
+</html>
